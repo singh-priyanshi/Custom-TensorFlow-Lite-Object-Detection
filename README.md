@@ -51,6 +51,61 @@ This project demonstrates how to implement a custom object detection model using
 
 ---
 
+## **Custom Object Detection with TensorFlow Lite**
+
+### **Supported Models**:
+- **SSD-MobileNet**: A lightweight, real-time object detection model.
+- **EfficientDet**: A more accurate model optimized for computational efficiency.
+
+---
+
+## **Architecture and Approach**
+
+The core architecture leverages the **Single Shot Multibox Detector (SSD)** with a **MobileNet** backbone. SSD is a well-known object detection architecture that strikes a good balance between speed and accuracy by predicting bounding boxes directly from feature maps of different sizes.
+
+- **SSD-MobileNet**: Combines SSD with MobileNet, a lightweight network ideal for mobile and edge applications.
+- **EfficientDet**: A more accurate and efficient detector that utilizes the **BiFPN** (Bi-directional Feature Pyramid Network) for efficient multi-scale feature fusion.
+
+Once the models are trained, they are converted to **TensorFlow Lite** format for deployment. **TFLite** optimizes the model for low-latency, low-power environments, making it ideal for mobile and embedded devices.
+
+---
+
+## **ML Algorithms**
+
+### **SSD (Single Shot Multibox Detector):**
+- Detects objects in a **single forward pass** through the network.
+- Uses multiple feature maps of different sizes to predict objects at different scales.
+  
+### **MobileNet:**
+- A **lightweight deep neural network** known for being efficient in terms of speed and size.
+- Serves as the backbone for feature extraction in SSD.
+
+### **EfficientDet:**
+- Another object detection architecture designed for **efficiency**.
+- Combines accuracy and speed with minimal computational overhead using the **BiFPN** for better feature fusion across different resolutions.
+
+---
+
+## **Training Process**
+
+The training process involves:
+
+1. **Custom Dataset**: A dataset of labeled images used for object detection.
+2. **TensorFlow Object Detection API**: Leverages predefined architectures like SSD-MobileNet and EfficientDet for simplifying the training process on custom datasets.
+3. **Transfer Learning**: Fine-tuning pre-trained models on the custom dataset for **faster convergence** and better generalization on new objects.
+
+---
+
+## **TFLite Model Conversion**
+
+After training, the model is converted to **TensorFlow Lite** format using the **TensorFlow Lite Converter**, which optimizes the model for mobile and edge devices by reducing its size and improving performance without significant accuracy loss.
+
+### **Deployment Targets**:
+- **Android Phones**: The TFLite model can be integrated into mobile apps via Android Studio or ML Kit.
+- **Raspberry Pi**: Use the TensorFlow Lite Python API to deploy models on Raspberry Pi or other IoT devices.
+
+---
+
 ## **Model Evaluation**
 
 We evaluate the model's performance using the **mAP** score, which is computed by comparing the ground truth bounding boxes with the model's predicted bounding boxes on a test dataset.
