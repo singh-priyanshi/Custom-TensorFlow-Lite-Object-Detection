@@ -3,6 +3,8 @@
 ## **Project Overview**
 
 This project demonstrates how to implement a custom object detection model using **TensorFlow Lite** for edge devices such as mobile and embedded systems. The model is trained on a custom dataset and optimized for performance through quantization to reduce its size, making it suitable for deployment in resource-constrained environments. The project involves evaluating the model’s accuracy using **mean average precision (mAP)**, a common metric for object detection tasks.
+<img width="641" alt="image" src="https://github.com/user-attachments/assets/5796843f-373c-4e0b-8969-85310a4ce173">
+
 
 ---
 
